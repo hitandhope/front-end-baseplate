@@ -1,0 +1,30 @@
+.center{
+	position: relative; display: block; 
+	margin: 0 auto; width: @sitewidth;
+}
+	// 2 cols (equal)
+.col_left, .col_right{
+	.blockleft;
+	width: (@sitewidth / 2) - @gutter / 2;
+}
+	// 2 cols (main & side: 2/3 v 1/3)
+.col_main{
+	.blockleft;
+	width: (@sitewidth / 3) * 2 - @gutter;
+}
+.col_side{
+	.blockleft;
+	width: (@sitewidth / 3);
+}
+	// 3 cols (equal)
+.col_1, .col_2, .col_3{
+	.blockleft;
+	width: (@sitewidth - @gutter * 2) / 3;
+}
+	.col_1, .col_2, .col_left, .col_main{margin-right: @gutter;}
+	
+@media only screen and (max-width: @break1) {
+	.center{
+		width: 90%;
+	}
+}

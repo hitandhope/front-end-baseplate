@@ -1,0 +1,78 @@
+
+/*
+	SITE_NAME_HERE - style.less
+	by Chris Lawes (Chris@TheUnit.co.uk)
+*/
+
+/*-------------------------------------------------
+	{LESS} VARIABLES
+-------------------------------------------------*/
+
+@import "_inc/less";
+
+/*-------------------------------------------------
+	GLOBAL ELEMENTS
+-------------------------------------------------*/
+
+body{
+	font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", 
+				 "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", 
+				 "Arial", sans-serif; 
+	font-weight: 400; font-stretch: normal;
+	font-size: 13px; 
+	color: @text; background: @background;
+	-webkit-font-smoothing: antialiased;
+}
+	h1, h2, h3, h4{
+		.clear;
+		color: darken(@text, 10%);
+		text-shadow: 1px 1px #fff;
+	}
+	a{
+		color: @color1;
+		.transition(0.2s);
+		&:hover{
+			color: lighten(@color1, 10%);
+			.transition(0.3s);
+		}
+	}
+	p{
+		.clear;
+	}
+	
+	::selection{color: #000; background-color: #FFE42A;}
+	::-moz-selection{color: #000; background: #FFE42A;}
+
+/*-------------------------------------------------
+	GRID LAYOUT
+-------------------------------------------------*/
+
+@import "_inc/grid";
+
+/*-------------------------------------------------
+	STRUCTURE
+-------------------------------------------------*/
+
+@import "_inc/structure";
+
+/*-------------------------------------------------
+	THEME
+-------------------------------------------------*/
+
+@import "_inc/theme";
+
+/*-------------------------------------------------
+	CONTENT
+-------------------------------------------------*/
+
+@import "_inc/content";
+
+/*-------------------------------------------------
+	BROWSER WARS
+-------------------------------------------------*/
+
+#fb-root{
+	width: 1px; height: 1px;
+	display: block; visibility: hidden;
+	overflow: hidden;
+}

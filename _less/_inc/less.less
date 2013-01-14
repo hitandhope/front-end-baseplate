@@ -1,0 +1,70 @@
+
+// VARS
+
+@imgfolder: '../img/';
+
+@sitewidth: 920px;
+@gutter: @sitewidth / 23; // how many gutters go into the site width? 920 / 23 returns 40
+
+@text: #676767;
+@background: #fff;
+
+@color1: #2e84c1; // main site colours (give more semantic names)
+@color2: #000;
+@color3: #000;
+
+@break1: @sitewidth + 70px;
+@break2: 700px;
+@break3: 595px;
+
+// MIX-INS
+
+.null{padding: 0; margin: 0; list-style-type: none;}
+.clear{
+	position: relative;
+	display: block; float: left;
+	width: 100%; clear: both;
+	padding: 0; margin: 0;
+}
+.blockleft{display: block; float: left;}
+.hidetext{
+	text-indent: -999px; overflow: hidden; 
+	font-size: 0.1px; font-size: 0px; 
+	direction: ltr; text-align: left;
+}
+.borders(@var: 4px){
+	-webkit-border-radius: @var;
+	   -moz-border-radius: @var;
+	        border-radius: @var;
+}
+.opacity(@op:100){
+	filter: alpha(opacity=@op);
+	-khtml-opacity: @op/100;
+	  -moz-opacity: @op/100;
+	       opacity: @op/100;
+}
+.transition(@time: 0.5s){
+	-webkit-transition: @time;
+	   -moz-transition: @time; 
+	        transition: @time;
+}
+.scale(@var: 1.5){
+	-webkit-transform: scale(@var);
+	   -moz-transform: scale(@var);
+	    -ms-transform: scale(@var);
+	     -o-transform: scale(@var);
+	        transform: scale(@var);
+}
+.box-shadow(@x: 0px, @y: 0px, @color: #000){
+	-webkit-box-shadow: @x @y @color;
+	   -moz-box-shadow: @x @y @color;
+	        box-shadow: @x @y @color;
+}
+.gradient(@origin: left, @start: #ffffff, @stop: #000000){
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image:    -moz-linear-gradient(@origin, @start, @stop);
+	background-image:     -ms-linear-gradient(@origin, @start, @stop);
+	background-image:      -o-linear-gradient(@origin, @start, @stop);
+	background-image:         linear-gradient(@origin, @start, @stop);
+}
